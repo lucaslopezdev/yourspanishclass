@@ -1,0 +1,21 @@
+---
+import { DeleSielePage } from '@/features/dele-siele';
+import { getTranslations, resolveLocale } from '@/shared/i18n';
+import BaseLayout from '@/shared/layout/BaseLayout.astro';
+import { localeStaticPaths } from '@/shared/lib/locale-paths';
+
+export function getStaticPaths() {
+	return localeStaticPaths();
+}
+
+const locale = resolveLocale(Astro.params.locale);
+const t = getTranslations(locale);
+---
+
+<BaseLayout
+	locale={locale}
+	title={t.pages.deleSiele.title}
+	description={t.pages.deleSiele.description}
+>
+	<DeleSielePage locale={locale} />
+</BaseLayout>

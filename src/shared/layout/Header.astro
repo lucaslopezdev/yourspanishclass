@@ -1,0 +1,145 @@
+---
+import { getTranslations, type Locale } from '@/shared/i18n';
+import { localePath, navRoutes, type NavKey } from '@/shared/lib/paths';
+import Button from '@/shared/ui/Button.astro';
+import LanguageSelect from '@/shared/ui/LanguageSelect.astro';
+import Logo from '@/shared/layout/Logo.astro';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const currentPath = Astro.url.pathname;
+const contactHref = localePath(locale, navRoutes.contact);
+
+const navItems: { key: NavKey; href: string; label: string }[] = [
+	{ key: 'home', href: localePath(locale, navRoutes.home), label: t.nav.home },
+	{ key: 'about', href: localePath(locale, navRoutes.about), label: t.nav.about },
+	{
+		key: 'lessons',
+		href: localePath(locale, navRoutes.lessons),
+		label: t.nav.lessons,
+	},
+	{
+		key: 'deleSiele',
+		href: localePath(locale, navRoutes.deleSiele),
+		label: t.nav.deleSiele,
+	},
+	{
+		key: 'resources',
+		href: localePath(locale, navRoutes.resources),
+		label: t.nav.resources,
+	},
+	{
+		key: 'contact',
+		href: contactHref,
+		label: t.nav.contact,
+	},
+];
+
+function isActive(href: string): boolean {
+	const normalized = href.endsWith('/') ? href.slice(0, -1) : href;
+	const current = currentPath.endsWith('/')
+		? currentPath.slice(0, -1)
+		: currentPath;
+	return current === normalized;
+}
+---
+
+<header
+	class="sticky top-0 z-50 border-b border-border/80 bg-surface/90 backdrop-blur-md transition duration-300"
+>
+	<div
+		class="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6"
+	>
+		<Logo siteName={t.siteName} href={localePath(locale)} />
+
+		<nav aria-label="Primary" class="hidden min-w-0 flex-1 justify-center lg:flex">
+			<ul
+				class="flex max-w-full flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-xs font-medium text-muted xl:gap-x-3 xl:text-sm"
+			>
+				{
+					navItems.map((item) => (
+						<li>
+							<a
+								href={item.href}
+								class:list={[
+									'inline-block max-w-[12.5rem] text-center leading-snug transition duration-200 hover:text-primary',
+									isActive(item.href) && 'text-primary',
+								]}
+								title={item.label}
+								aria-current={isActive(item.href) ? 'page' : undefined}
+							>
+								{item.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+
+		<div class="flex shrink-0 items-center gap-2 sm:gap-3">
+			<LanguageSelect locale={locale} label={t.language} />
+			<div class="hidden lg:block">
+				<Button href={contactHref} variant="primary">
+					{t.cta.contact}
+				</Button>
+			</div>
+
+			<details class="lg:hidden" data-disclosure>
+				<summary
+					class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-border bg-surface-elevated text-ink transition duration-200 hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
+					aria-label={t.menu.open}
+				>
+					<span class="sr-only">{t.menu.open}</span>
+					<svg
+						class="h-5 w-5"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						aria-hidden="true"
+					>
+						<path d="M4 7h16M4 12h16M4 17h16"></path>
+					</svg>
+				</summary>
+
+				<nav
+					class="absolute top-full right-4 left-4 z-[60] mt-2 rounded-xl border border-border bg-surface-elevated p-3 shadow-lg sm:right-6 sm:left-6"
+					aria-label={t.menu.open}
+				>
+					<ul class="grid gap-1 text-sm font-medium text-ink">
+						{
+							navItems.map((item) => (
+								<li>
+									<a
+										href={item.href}
+										class:list={[
+											'block rounded-lg px-3 py-2.5 leading-snug transition duration-150 hover:bg-primary/10 hover:text-primary',
+											isActive(item.href) && 'bg-primary/10 text-primary',
+										]}
+										aria-current={isActive(item.href) ? 'page' : undefined}
+									>
+										{item.label}
+									</a>
+								</li>
+							))
+						}
+					</ul>
+					<div class="mt-3 border-t border-border pt-3">
+						<Button
+							href={contactHref}
+							variant="primary"
+							class="w-full"
+						>
+							{t.cta.contact}
+						</Button>
+					</div>
+				</nav>
+			</details>
+		</div>
+	</div>
+</header>

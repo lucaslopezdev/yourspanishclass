@@ -1,0 +1,72 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { localeLabels, locales, type Locale } from '@/shared/i18n';
+import { stripLocaleFromPath } from '@/shared/lib/paths';
+import Flag from '@/shared/ui/Flag.astro';
+
+interface Props {
+	locale: Locale;
+	label: string;
+}
+
+const { locale, label } = Astro.props;
+const pathWithoutLocale = stripLocaleFromPath(Astro.url.pathname, locale);
+
+const options = locales.map((code) => ({
+	code,
+	label: localeLabels[code],
+	href: getRelativeLocaleUrl(code, pathWithoutLocale),
+	current: code === locale,
+}));
+---
+
+<details class="group relative open:[&_.lang-chevron]:rotate-180" data-disclosure>
+	<summary
+		class="flex cursor-pointer items-center gap-2 rounded-lg border border-border bg-surface-elevated px-2.5 py-2 text-sm font-medium text-ink transition duration-200 hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
+		aria-label={label}
+	>
+		<Flag locale={locale} />
+		<span class="hidden max-w-[7.5rem] truncate lg:inline">{localeLabels[locale]}</span>
+		<svg
+			class="lang-chevron h-3.5 w-3.5 shrink-0 text-muted transition duration-200"
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			aria-hidden="true"
+		>
+			<path
+				fill-rule="evenodd"
+				d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z"
+				clip-rule="evenodd"></path>
+		</svg>
+	</summary>
+
+	<ul
+		class="absolute top-full right-0 z-[60] mt-1.5 min-w-48 overflow-hidden rounded-xl border border-border bg-surface-elevated py-1 shadow-lg"
+		role="listbox"
+		aria-label={label}
+	>
+		{
+			options.map((option) => (
+				<li role="none">
+					<a
+						href={option.href}
+						role="option"
+						aria-selected={option.current}
+						data-locale-link
+						data-locale={option.code}
+						data-astro-reload
+						class:list={[
+							'flex items-center gap-2.5 px-3 py-2 text-sm transition duration-150 hover:bg-primary/10',
+							option.current
+								? 'bg-primary/10 font-semibold text-primary'
+								: 'text-ink',
+						]}
+					>
+						<Flag locale={option.code} />
+						<span>{option.label}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</details>

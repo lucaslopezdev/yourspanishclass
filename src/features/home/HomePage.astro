@@ -1,0 +1,26 @@
+---
+import ContactCta from '@/features/home/components/ContactCta.astro';
+import ExamPrep from '@/features/home/components/ExamPrep.astro';
+import Hero from '@/features/home/components/Hero.astro';
+import Intro from '@/features/home/components/Intro.astro';
+import Services from '@/features/home/components/Services.astro';
+import StatsBar from '@/features/home/components/StatsBar.astro';
+import type { Locale } from '@/shared/i18n';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<Hero locale={locale} />
+<StatsBar locale={locale} />
+<Intro locale={locale} />
+<Services locale={locale} />
+<ExamPrep locale={locale} />
+<ContactCta locale={locale} />
+
+<script>
+	import '@/features/home/motion';
+</script>

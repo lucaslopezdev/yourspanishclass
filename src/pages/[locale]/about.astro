@@ -1,0 +1,21 @@
+---
+import { AboutPage } from '@/features/about';
+import { getTranslations, resolveLocale } from '@/shared/i18n';
+import BaseLayout from '@/shared/layout/BaseLayout.astro';
+import { localeStaticPaths } from '@/shared/lib/locale-paths';
+
+export function getStaticPaths() {
+	return localeStaticPaths();
+}
+
+const locale = resolveLocale(Astro.params.locale);
+const t = getTranslations(locale);
+---
+
+<BaseLayout
+	locale={locale}
+	title={t.pages.about.title}
+	description={t.pages.about.description}
+>
+	<AboutPage locale={locale} />
+</BaseLayout>

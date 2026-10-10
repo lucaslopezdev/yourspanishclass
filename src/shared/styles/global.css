@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+	--font-display: "Fraunces", Georgia, "Times New Roman", serif;
+	--font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+
+	/*
+	 * Brand palette — change these four hex values to rebrand the site.
+	 * All UI tokens (buttons, links, focus rings) derive from them.
+	 */
+	--color-primary: #0f6b6b;
+	--color-secondary: #1a2332;
+	--color-accent: #c45c26;
+	--color-tertiary: #c9a227;
+
+	--color-primary-foreground: #ffffff;
+	--color-secondary-foreground: #ffffff;
+	--color-accent-foreground: #ffffff;
+	--color-tertiary-foreground: #1a2332;
+
+	--color-primary-hover: color-mix(in oklab, var(--color-primary) 82%, black);
+	--color-secondary-hover: color-mix(in oklab, var(--color-secondary) 82%, black);
+	--color-accent-hover: color-mix(in oklab, var(--color-accent) 82%, black);
+	--color-tertiary-hover: color-mix(in oklab, var(--color-tertiary) 82%, black);
+
+	--color-ink: var(--color-secondary);
+	--color-muted: #5c6b7a;
+	--color-surface: #f7f9fb;
+	--color-surface-elevated: #ffffff;
+	--color-border: #d7e0e8;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-surface font-sans text-ink antialiased;
+	}
+
+	::selection {
+		background: color-mix(in oklab, var(--color-primary) 25%, white);
+	}
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	summary {
+		list-style: none;
+	}
+}
+
+@layer utilities {
+	.page-enter {
+		animation: page-fade 420ms ease-out both;
+	}
+
+	@keyframes page-fade {
+		from {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.reveal {
+		opacity: 0;
+		transform: translateY(14px);
+		transition:
+			opacity 560ms ease-out,
+			transform 560ms ease-out;
+	}
+
+	.reveal.is-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.page-enter,
+	.reveal {
+		animation: none;
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}

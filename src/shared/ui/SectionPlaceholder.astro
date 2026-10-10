@@ -1,0 +1,40 @@
+---
+import Button from '@/shared/ui/Button.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	placeholder: string;
+	ctaLabel: string;
+	ctaHref: string;
+}
+
+const { title, description, placeholder, ctaLabel, ctaHref } = Astro.props;
+---
+
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+	<div
+		class="relative overflow-hidden rounded-3xl border border-border bg-surface-elevated px-6 py-14 sm:px-12"
+	>
+		<div
+			class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,color-mix(in_oklab,var(--color-primary)_18%,transparent),transparent_45%)]"
+			aria-hidden="true"
+		>
+		</div>
+		<p
+			class="relative text-sm font-semibold uppercase tracking-[0.18em] text-primary"
+		>
+			Your Spanish Class
+		</p>
+		<h1
+			class="relative mt-4 max-w-2xl font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
+		>
+			{title}
+		</h1>
+		<p class="relative mt-4 max-w-xl text-lg text-muted">{description}</p>
+		<p class="relative mt-3 text-sm text-muted/90">{placeholder}</p>
+		<div class="relative mt-8">
+			<Button href={ctaHref} variant="primary">{ctaLabel}</Button>
+		</div>
+	</div>
+</section>

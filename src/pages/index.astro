@@ -1,0 +1,62 @@
+---
+import { defaultLocale, locales } from '@/shared/i18n';
+import { LOCALE_STORAGE_KEY } from '@/shared/lib/detect-locale';
+---
+
+<!doctype html>
+<html lang={defaultLocale}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<title>Your Spanish Class</title>
+		<script
+			define:vars={{
+				defaultLocale,
+				locales,
+				storageKey: LOCALE_STORAGE_KEY,
+			}}
+		>
+			const supported = new Set(locales);
+
+			function mapLanguage(language) {
+				const normalized = String(language).toLowerCase().replace('_', '-');
+				const base = normalized.split('-')[0] ?? '';
+
+				if (supported.has(normalized)) return normalized;
+				if (supported.has(base)) return base;
+				return null;
+			}
+
+			function detectLocale() {
+				try {
+					const saved = localStorage.getItem(storageKey);
+					if (saved && supported.has(saved)) {
+						return saved;
+					}
+				} catch {
+					// ignore storage access errors
+				}
+
+				const candidates = [
+					...(navigator.languages ?? []),
+					navigator.language,
+				].filter(Boolean);
+
+				for (const language of candidates) {
+					const matched = mapLanguage(language);
+					if (matched) return matched;
+				}
+
+				return defaultLocale;
+			}
+
+			const locale = detectLocale();
+			window.location.replace(`/${locale}/`);
+		</script>
+		<noscript>
+			<meta http-equiv="refresh" content={`0;url=/${defaultLocale}/`} />
+		</noscript>
+	</head>
+	<body></body>
+</html>

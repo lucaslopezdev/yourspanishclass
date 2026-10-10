@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import logo from '@/assets/logo.webp';
+
+interface Props {
+	siteName: string;
+	href: string;
+}
+
+const { siteName, href } = Astro.props;
+---
+
+<a
+	href={href}
+	class="inline-flex min-w-0 items-center rounded-xl bg-secondary px-2 py-1.5 transition duration-200 hover:bg-secondary-hover"
+	aria-label={siteName}
+>
+	<Image
+		src={logo}
+		alt=""
+		class="h-9 w-auto max-w-[8.5rem] object-contain object-left sm:h-10 sm:max-w-[10.5rem] lg:h-11 lg:max-w-[12rem]"
+		widths={[160, 220, 280]}
+		sizes="(min-width: 1024px) 192px, (min-width: 640px) 168px, 136px"
+	/>
+</a>
