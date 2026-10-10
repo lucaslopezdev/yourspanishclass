@@ -1,0 +1,21 @@
+packages:
+  - '.'
+
+confirmModulesPurge: false
+
+allowBuilds:
+  sharp: true
+  esbuild: true
+
+supportedArchitectures:
+  os:
+    - current
+    - linux
+  cpu:
+    - current
+    - x64
+    - arm64
+
+publicHoistPattern:
+  - '*sharp*'
+  - '*@img*'
