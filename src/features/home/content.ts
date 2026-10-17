@@ -63,13 +63,13 @@ const statsValues = {
 export const homeCopy: Record<Locale, HomeCopy> = {
 	es: {
 		hero: {
-			eyebrow: 'Clases de español · Salamanca',
+			eyebrow: 'Clases de español',
 			title: 'Español a tu ritmo, con una profesora que te acompaña',
 			subtitle:
-				'Clases individuales, grupos reducidos y preparación DELE y SIELE. Desde Salamanca, para estudiantes de todo el mundo.',
+				'Clases individuales, grupos reducidos y preparación DELE y SIELE.',
 			ctaPrimary: 'Reserva tu clase de prueba',
 			ctaSecondary: 'Preparación DELE y SIELE',
-			imageAlt: 'Cristina en Salamanca, frente a la catedral',
+			imageAlt: 'Cristina frente a la catedral',
 		},
 		stats: {
 			title: 'Un acompañamiento cercano, con resultados',
@@ -84,9 +84,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 			eyebrow: 'Tu profesora',
 			title: 'Soy Cristina, y el español es mi oficio',
 			summary:
-				'Filóloga en Salamanca y profesora desde hace 8 años. Acompaño a estudiantes de todo el mundo, de las primeras palabras al DELE o al SIELE.',
+				'Filóloga y profesora desde hace 8 años. Acompaño a estudiantes de todo el mundo, de las primeras palabras al DELE o al SIELE.',
 			cta: 'Más sobre mí',
-			imageAlt: 'Cristina junto al río, con Salamanca al fondo',
+			imageAlt: 'Cristina junto al río',
 		},
 		services: {
 			eyebrow: 'Servicios',
@@ -150,13 +150,12 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 	},
 	en: {
 		hero: {
-			eyebrow: 'Spanish lessons · Salamanca',
+			eyebrow: 'Spanish lessons',
 			title: 'Spanish at your pace, with a teacher who stays with you',
-			subtitle:
-				'One-to-one lessons, small groups, and DELE & SIELE prep. From Salamanca, for students everywhere.',
+			subtitle: 'One-to-one lessons, small groups, and DELE & SIELE prep.',
 			ctaPrimary: 'Book a trial lesson',
 			ctaSecondary: 'DELE & SIELE prep',
-			imageAlt: 'Cristina in Salamanca, in front of the cathedral',
+			imageAlt: 'Cristina in front of the cathedral',
 		},
 		stats: {
 			title: 'Close guidance, real progress',
@@ -171,9 +170,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 			eyebrow: 'Your teacher',
 			title: 'I’m Cristina, and Spanish is my craft',
 			summary:
-				'A philologist in Salamanca and a teacher for 8 years. I walk students from around the world from their first words to the DELE or SIELE.',
+				'A philologist and a teacher for 8 years. I walk students from around the world from their first words to the DELE or SIELE.',
 			cta: 'More about me',
-			imageAlt: 'Cristina by the river, with Salamanca in the background',
+			imageAlt: 'Cristina by the river',
 		},
 		services: {
 			eyebrow: 'What I offer',
@@ -237,13 +236,12 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 	},
 	pt: {
 		hero: {
-			eyebrow: 'Aulas de espanhol · Salamanca',
+			eyebrow: 'Aulas de espanhol',
 			title: 'Espanhol no teu ritmo, com uma professora que te acompanha',
-			subtitle:
-				'Aulas individuais, grupos reduzidos e preparação DELE e SIELE. De Salamanca, para estudantes de todo o mundo.',
+			subtitle: 'Aulas individuais, grupos reduzidos e preparação DELE e SIELE.',
 			ctaPrimary: 'Reserva a tua aula experimental',
 			ctaSecondary: 'Preparação DELE e SIELE',
-			imageAlt: 'Cristina em Salamanca, em frente à catedral',
+			imageAlt: 'Cristina em frente à catedral',
 		},
 		stats: {
 			title: 'Acompanhamento próximo, com resultados',
@@ -258,9 +256,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 			eyebrow: 'A tua professora',
 			title: 'Sou a Cristina, e o espanhol é o meu ofício',
 			summary:
-				'Filóloga em Salamanca e professora há 8 anos. Acompanho estudantes de todo o mundo, das primeiras palavras ao DELE ou ao SIELE.',
+				'Filóloga e professora há 8 anos. Acompanho estudantes de todo o mundo, das primeiras palavras ao DELE ou ao SIELE.',
 			cta: 'Mais sobre mim',
-			imageAlt: 'Cristina junto ao rio, com Salamanca ao fundo',
+			imageAlt: 'Cristina junto ao rio',
 		},
 		services: {
 			eyebrow: 'Serviços',
@@ -324,13 +322,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 	},
 	it: {
 		hero: {
-			eyebrow: 'Lezioni di spagnolo · Salamanca',
+			eyebrow: 'Lezioni di spagnolo',
 			title: 'Lo spagnolo al tuo ritmo, con una docente che ti accompagna',
 			subtitle:
-				'Lezioni individuali, gruppi ridotti e preparazione DELE e SIELE. Da Salamanca, per studenti di tutto il mondo.',
+				'Lezioni individuali, gruppi ridotti e preparazione DELE e SIELE.',
 			ctaPrimary: 'Prenota la lezione di prova',
 			ctaSecondary: 'Preparazione DELE e SIELE',
-			imageAlt: 'Cristina a Salamanca, davanti alla cattedrale',
+			imageAlt: 'Cristina davanti alla cattedrale',
 		},
 		stats: {
 			title: 'Un percorso vicino, con risultati',
@@ -345,9 +343,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 			eyebrow: 'La tua insegnante',
 			title: 'Sono Cristina, e lo spagnolo è il mio mestiere',
 			summary:
-				'Filologa a Salamanca e insegnante da 8 anni. Accompagno studenti da tutto il mondo, dalle prime parole al DELE o al SIELE.',
+				'Filologa e insegnante da 8 anni. Accompagno studenti da tutto il mondo, dalle prime parole al DELE o al SIELE.',
 			cta: 'Di più su di me',
-			imageAlt: 'Cristina vicino al fiume, con Salamanca sullo sfondo',
+			imageAlt: 'Cristina vicino al fiume',
 		},
 		services: {
 			eyebrow: 'Cosa offro',
@@ -411,13 +409,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 	},
 	fr: {
 		hero: {
-			eyebrow: 'Cours d’espagnol · Salamanque',
+			eyebrow: 'Cours d’espagnol',
 			title: 'L’espagnol à votre rythme, avec une professeure à vos côtés',
 			subtitle:
-				'Cours particuliers, petits groupes et préparation DELE et SIELE. Depuis Salamanque, pour des élèves du monde entier.',
+				'Cours particuliers, petits groupes et préparation DELE et SIELE.',
 			ctaPrimary: 'Réserver un cours d’essai',
 			ctaSecondary: 'Préparation DELE et SIELE',
-			imageAlt: 'Cristina à Salamanque, devant la cathédrale',
+			imageAlt: 'Cristina devant la cathédrale',
 		},
 		stats: {
 			title: 'Un accompagnement proche, des progrès concrets',
@@ -432,9 +430,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 			eyebrow: 'Votre professeure',
 			title: 'Je suis Cristina, et l’espagnol est mon métier',
 			summary:
-				'Philologue à Salamanque et professeure depuis 8 ans. J’accompagne des élèves du monde entier, des premiers mots au DELE ou au SIELE.',
+				'Philologue et professeure depuis 8 ans. J’accompagne des élèves du monde entier, des premiers mots au DELE ou au SIELE.',
 			cta: 'En savoir plus sur moi',
-			imageAlt: 'Cristina au bord de la rivière, Salamanque en arrière-plan',
+			imageAlt: 'Cristina au bord de la rivière',
 		},
 		services: {
 			eyebrow: 'Ce que je propose',
@@ -498,13 +496,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 	},
 	de: {
 		hero: {
-			eyebrow: 'Spanischunterricht · Salamanca',
+			eyebrow: 'Spanischunterricht',
 			title: 'Spanisch in deinem Tempo, mit einer Lehrerin an deiner Seite',
 			subtitle:
-				'Einzelunterricht, kleine Gruppen und DELE- sowie SIELE-Vorbereitung. Aus Salamanca, für Lernende weltweit.',
+				'Einzelunterricht, kleine Gruppen und DELE- sowie SIELE-Vorbereitung.',
 			ctaPrimary: 'Probestunde buchen',
 			ctaSecondary: 'DELE- und SIELE-Vorbereitung',
-			imageAlt: 'Cristina in Salamanca, vor der Kathedrale',
+			imageAlt: 'Cristina vor der Kathedrale',
 		},
 		stats: {
 			title: 'Nahe Begleitung, echte Fortschritte',
@@ -519,9 +517,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 			eyebrow: 'Deine Lehrerin',
 			title: 'Ich bin Cristina, und Spanisch ist mein Beruf',
 			summary:
-				'Philologin in Salamanca und seit 8 Jahren Lehrerin. Ich begleite Lernende aus aller Welt, von den ersten Wörtern bis zum DELE oder SIELE.',
+				'Philologin und seit 8 Jahren Lehrerin. Ich begleite Lernende aus aller Welt, von den ersten Wörtern bis zum DELE oder SIELE.',
 			cta: 'Mehr über mich',
-			imageAlt: 'Cristina am Fluss, mit Salamanca im Hintergrund',
+			imageAlt: 'Cristina am Fluss',
 		},
 		services: {
 			eyebrow: 'Angebot',

@@ -31,13 +31,13 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 		hero: {
 			eyebrow: 'Sobre mí',
 			title: 'Soy Cristina, y el español es mi oficio',
-			lead: 'Filóloga, profesora y examinadora. Vivo en Salamanca y acompaño a quienes quieren hablar español de verdad.',
-			imageAlt: 'Cristina junto al río, con Salamanca al fondo',
+			lead: 'Filóloga, profesora y examinadora. Acompaño a quienes quieren hablar español de verdad.',
+			imageAlt: 'Cristina junto al río',
 		},
 		who: {
 			title: 'Quién soy',
 			paragraphs: [
-				'Estudié el Grado en Filología Hispánica y el Máster en Enseñanza del Español como Lengua Extranjera en Salamanca. Llegué a la docencia porque me interesa la lengua cuando está viva: cuando alguien se atreve a contar su día, a discutir una noticia o a reírse en otro idioma.',
+				'Estudié el Grado en Filología Hispánica y el Máster en Enseñanza del Español como Lengua Extranjera. Llegué a la docencia porque me interesa la lengua cuando está viva: cuando alguien se atreve a contar su día, a discutir una noticia o a reírse en otro idioma.',
 				'Llevo 8 años trabajando con cientos de estudiantes de culturas, niveles y perfiles muy distintos. Esa diversidad me enseñó a escuchar: qué necesitas, dónde te trabas y cómo avanzar sin perder el gusto por hablar.',
 			],
 		},
@@ -50,7 +50,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 			],
 		},
 		city: {
-			title: 'Salamanca, y lo que me mueve',
+			title: 'Lo que me mueve',
 			paragraphs: [
 				'Vivo en una ciudad universitaria donde el español se oye en cada esquina. Me gusta esa mezcla de historia, estudiantes y conversación cotidiana: el río, las plazas, las tardes que se alargan.',
 				'Me interesa la cultura tanto como la lengua. Leer, pasear y prestar atención a cómo habla la gente me recuerda que el español no es un temario: es una forma de estar con los demás.',
@@ -67,13 +67,13 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 		hero: {
 			eyebrow: 'About me',
 			title: 'I’m Cristina, and Spanish is my craft',
-			lead: 'Philologist, teacher and examiner. I live in Salamanca and work with people who want to speak Spanish for real.',
-			imageAlt: 'Cristina by the river, with Salamanca in the background',
+			lead: 'Philologist, teacher and examiner. I work with people who want to speak Spanish for real.',
+			imageAlt: 'Cristina by the river',
 		},
 		who: {
 			title: 'Who I am',
 			paragraphs: [
-				'I studied Hispanic Philology and a Master’s in Teaching Spanish as a Foreign Language in Salamanca. I came to teaching because I care about language when it is alive: when someone dares to talk about their day, argue over the news or laugh in another language.',
+				'I studied Hispanic Philology and a Master’s in Teaching Spanish as a Foreign Language. I came to teaching because I care about language when it is alive: when someone dares to talk about their day, argue over the news or laugh in another language.',
 				'For 8 years I have worked with hundreds of students of many cultures, levels and profiles. That mix taught me to listen: what you need, where you get stuck, and how to move forward without losing the joy of speaking.',
 			],
 		},
@@ -86,7 +86,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 			],
 		},
 		city: {
-			title: 'Salamanca, and what moves me',
+			title: 'What moves me',
 			paragraphs: [
 				'I live in a university city where Spanish is in the air. I like that mix of history, students and everyday talk: the river, the squares, the long afternoons.',
 				'Culture matters to me as much as language. Reading, walking and listening to how people speak remind me that Spanish is not a syllabus: it is a way of being with others.',
@@ -103,13 +103,13 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 		hero: {
 			eyebrow: 'Sobre mim',
 			title: 'Sou a Cristina, e o espanhol é o meu ofício',
-			lead: 'Filóloga, professora e examinadora. Vivo em Salamanca e acompanho quem quer falar espanhol de verdade.',
-			imageAlt: 'Cristina junto ao rio, com Salamanca ao fundo',
+			lead: 'Filóloga, professora e examinadora. Acompanho quem quer falar espanhol de verdade.',
+			imageAlt: 'Cristina junto ao rio',
 		},
 		who: {
 			title: 'Quem sou',
 			paragraphs: [
-				'Estudei Filologia Hispânica e o Mestrado em Ensino de Espanhol como Língua Estrangeira em Salamanca. Cheguei ao ensino porque me interessa a língua quando está viva: quando alguém se atreve a contar o dia, a discutir uma notícia ou a rir noutra língua.',
+				'Estudei Filologia Hispânica e o Mestrado em Ensino de Espanhol como Língua Estrangeira. Cheguei ao ensino porque me interessa a língua quando está viva: quando alguém se atreve a contar o dia, a discutir uma notícia ou a rir noutra língua.',
 				'Há 8 anos trabalho com centenas de estudantes de culturas, níveis e perfis muito distintos. Essa diversidade ensinou-me a escutar: o que precisas, onde travas e como avançar sem perder o gosto de falar.',
 			],
 		},
@@ -122,7 +122,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 			],
 		},
 		city: {
-			title: 'Salamanca, e o que me move',
+			title: 'O que me move',
 			paragraphs: [
 				'Vivo numa cidade universitária onde o espanhol se ouve em cada esquina. Gosto dessa mistura de história, estudantes e conversa do dia a dia: o rio, as praças, as tardes que se alongam.',
 				'A cultura interessa-me tanto como a língua. Ler, passear e prestar atenção a como as pessoas falam lembram-me que o espanhol não é um programa: é uma forma de estar com os outros.',
@@ -139,13 +139,13 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 		hero: {
 			eyebrow: 'Chi sono',
 			title: 'Sono Cristina, e lo spagnolo è il mio mestiere',
-			lead: 'Filologa, insegnante ed esaminatrice. Vivo a Salamanca e accompagno chi vuole parlare spagnolo sul serio.',
-			imageAlt: 'Cristina vicino al fiume, con Salamanca sullo sfondo',
+			lead: 'Filologa, insegnante ed esaminatrice. Accompagno chi vuole parlare spagnolo sul serio.',
+			imageAlt: 'Cristina vicino al fiume',
 		},
 		who: {
 			title: 'Chi sono',
 			paragraphs: [
-				'Ho studiato Filologia Ispanica e il Master in Insegnamento dello Spagnolo come Lingua Straniera a Salamanca. Sono arrivata alla docenza perché mi interessa la lingua quando è viva: quando qualcuno osa raccontare la giornata, discutere una notizia o ridere in un’altra lingua.',
+				'Ho studiato Filologia Ispanica e il Master in Insegnamento dello Spagnolo come Lingua Straniera. Sono arrivata alla docenza perché mi interessa la lingua quando è viva: quando qualcuno osa raccontare la giornata, discutere una notizia o ridere in un’altra lingua.',
 				'Da 8 anni lavoro con centinaia di studenti di culture, livelli e profili molto diversi. Questa varietà mi ha insegnato ad ascoltare: di cosa hai bisogno, dove ti blocchi e come avanzare senza perdere il piacere di parlare.',
 			],
 		},
@@ -158,7 +158,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 			],
 		},
 		city: {
-			title: 'Salamanca, e ciò che mi muove',
+			title: 'Ciò che mi muove',
 			paragraphs: [
 				'Vivo in una città universitaria dove lo spagnolo si sente a ogni angolo. Mi piace quel mix di storia, studenti e conversazione quotidiana: il fiume, le piazze, i pomeriggi che si allungano.',
 				'La cultura mi interessa tanto quanto la lingua. Leggere, camminare e ascoltare come parla la gente mi ricorda che lo spagnolo non è un programma: è un modo di stare con gli altri.',
@@ -175,13 +175,13 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 		hero: {
 			eyebrow: 'À propos',
 			title: 'Je suis Cristina, et l’espagnol est mon métier',
-			lead: 'Philologue, professeure et examinatrice. J’habite à Salamanque et j’accompagne celles et ceux qui veulent vraiment parler espagnol.',
-			imageAlt: 'Cristina au bord de la rivière, Salamanque en arrière-plan',
+			lead: 'Philologue, professeure et examinatrice. J’accompagne celles et ceux qui veulent vraiment parler espagnol.',
+			imageAlt: 'Cristina au bord de la rivière',
 		},
 		who: {
 			title: 'Qui je suis',
 			paragraphs: [
-				'J’ai étudié la philologie hispanique et un master en enseignement de l’espagnol langue étrangère à Salamanque. Je suis arrivée à l’enseignement parce que la langue m’intéresse quand elle est vivante : quand quelqu’un ose raconter sa journée, discuter une info ou rire dans une autre langue.',
+				'J’ai étudié la philologie hispanique et un master en enseignement de l’espagnol langue étrangère. Je suis arrivée à l’enseignement parce que la langue m’intéresse quand elle est vivante : quand quelqu’un ose raconter sa journée, discuter une info ou rire dans une autre langue.',
 				'Depuis 8 ans, je travaille avec des centaines d’élèves de cultures, de niveaux et de profils très différents. Cette diversité m’a appris à écouter : ce dont vous avez besoin, où vous bloquez, et comment avancer sans perdre le plaisir de parler.',
 			],
 		},
@@ -194,7 +194,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 			],
 		},
 		city: {
-			title: 'Salamanque, et ce qui me porte',
+			title: 'Ce qui me porte',
 			paragraphs: [
 				'Je vis dans une ville universitaire où l’espagnol s’entend à chaque coin de rue. J’aime ce mélange d’histoire, d’étudiants et de conversation du quotidien : la rivière, les places, les après-midi qui s’étirent.',
 				'La culture m’importe autant que la langue. Lire, marcher et écouter comment les gens parlent me rappellent que l’espagnol n’est pas un programme : c’est une façon d’être avec les autres.',
@@ -211,13 +211,13 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 		hero: {
 			eyebrow: 'Über mich',
 			title: 'Ich bin Cristina, und Spanisch ist mein Beruf',
-			lead: 'Philologin, Lehrerin und Prüferin. Ich lebe in Salamanca und begleite Menschen, die Spanisch wirklich sprechen wollen.',
-			imageAlt: 'Cristina am Fluss, mit Salamanca im Hintergrund',
+			lead: 'Philologin, Lehrerin und Prüferin. Ich begleite Menschen, die Spanisch wirklich sprechen wollen.',
+			imageAlt: 'Cristina am Fluss',
 		},
 		who: {
 			title: 'Wer ich bin',
 			paragraphs: [
-				'Ich habe in Salamanca Hispanische Philologie und den Master in der Lehre des Spanischen als Fremdsprache studiert. Zur Didaktik bin ich gekommen, weil mich Sprache interessiert, wenn sie lebendig ist: wenn jemand den Tag erzählt, über eine Nachricht diskutiert oder in einer anderen Sprache lacht.',
+				'Ich habe Hispanische Philologie und den Master in der Lehre des Spanischen als Fremdsprache studiert. Zur Didaktik bin ich gekommen, weil mich Sprache interessiert, wenn sie lebendig ist: wenn jemand den Tag erzählt, über eine Nachricht diskutiert oder in einer anderen Sprache lacht.',
 				'Seit 8 Jahren arbeite ich mit Hunderten Lernenden aus sehr unterschiedlichen Kulturen, Niveaus und Profilen. Diese Vielfalt hat mich gelehrt zuzuhören: was du brauchst, wo du hängen bleibst und wie du vorankommst, ohne die Freude am Sprechen zu verlieren.',
 			],
 		},
@@ -230,7 +230,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
 			],
 		},
 		city: {
-			title: 'Salamanca, und was mich trägt',
+			title: 'Was mich trägt',
 			paragraphs: [
 				'Ich lebe in einer Universitätsstadt, in der Spanisch an jeder Ecke zu hören ist. Ich mag diese Mischung aus Geschichte, Studierenden und Alltagssprache: der Fluss, die Plätze, die langen Nachmittage.',
 				'Kultur ist mir so wichtig wie die Sprache. Lesen, spazieren und hören, wie Menschen sprechen, erinnern mich daran: Spanisch ist kein Lehrplan, sondern eine Art, mit anderen zu sein.',

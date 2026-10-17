@@ -79,12 +79,12 @@ export const ui: Record<Locale, UiStrings> = {
 			home: {
 				title: 'Inicio',
 				description:
-					'Clases de español personalizadas y preparación DELE y SIELE con Cristina, desde Salamanca.',
+					'Clases de español personalizadas y preparación DELE y SIELE con Cristina.',
 			},
 			about: {
 				title: 'Sobre mí',
 				description:
-					'Cristina, filóloga y profesora de español en Salamanca. Examinadora DELE y preparadora SIELE.',
+					'Cristina, filóloga y profesora de español. Examinadora DELE y preparadora SIELE.',
 			},
 			lessons: {
 				title: 'Clases de español',
@@ -143,12 +143,12 @@ export const ui: Record<Locale, UiStrings> = {
 			home: {
 				title: 'Home',
 				description:
-					'Personalized Spanish lessons and DELE & SIELE prep with Cristina, from Salamanca.',
+					'Personalized Spanish lessons and DELE & SIELE prep with Cristina.',
 			},
 			about: {
 				title: 'About me',
 				description:
-					'Cristina, Spanish teacher and philologist in Salamanca. DELE examiner and SIELE trainer.',
+					'Cristina, Spanish teacher and philologist. DELE examiner and SIELE trainer.',
 			},
 			lessons: {
 				title: 'Spanish lessons',
@@ -207,12 +207,12 @@ export const ui: Record<Locale, UiStrings> = {
 			home: {
 				title: 'Início',
 				description:
-					'Aulas de espanhol personalizadas e preparação DELE e SIELE com a Cristina, desde Salamanca.',
+					'Aulas de espanhol personalizadas e preparação DELE e SIELE com a Cristina.',
 			},
 			about: {
 				title: 'Sobre mim',
 				description:
-					'Cristina, filóloga e professora de espanhol em Salamanca. Examinadora DELE e preparadora SIELE.',
+					'Cristina, filóloga e professora de espanhol. Examinadora DELE e preparadora SIELE.',
 			},
 			lessons: {
 				title: 'Aulas de espanhol',
@@ -271,12 +271,12 @@ export const ui: Record<Locale, UiStrings> = {
 			home: {
 				title: 'Home',
 				description:
-					'Lezioni di spagnolo su misura e preparazione DELE e SIELE con Cristina, da Salamanca.',
+					'Lezioni di spagnolo su misura e preparazione DELE e SIELE con Cristina.',
 			},
 			about: {
 				title: 'Chi sono',
 				description:
-					'Cristina, filologa e insegnante di spagnolo a Salamanca. Esaminatrice DELE e preparatrice SIELE.',
+					'Cristina, filologa e insegnante di spagnolo. Esaminatrice DELE e preparatrice SIELE.',
 			},
 			lessons: {
 				title: 'Lezioni di spagnolo',
@@ -335,12 +335,12 @@ export const ui: Record<Locale, UiStrings> = {
 			home: {
 				title: 'Accueil',
 				description:
-					'Cours d’espagnol personnalisés et préparation DELE et SIELE avec Cristina, depuis Salamanque.',
+					'Cours d’espagnol personnalisés et préparation DELE et SIELE avec Cristina.',
 			},
 			about: {
 				title: 'À propos',
 				description:
-					'Cristina, philologue et professeure d’espagnol à Salamanque. Examinatrice DELE et préparatrice SIELE.',
+					'Cristina, philologue et professeure d’espagnol. Examinatrice DELE et préparatrice SIELE.',
 			},
 			lessons: {
 				title: 'Cours d’espagnol',
@@ -399,12 +399,12 @@ export const ui: Record<Locale, UiStrings> = {
 			home: {
 				title: 'Start',
 				description:
-					'Persönlicher Spanischunterricht und DELE- sowie SIELE-Vorbereitung mit Cristina, aus Salamanca.',
+					'Persönlicher Spanischunterricht und DELE- sowie SIELE-Vorbereitung mit Cristina.',
 			},
 			about: {
 				title: 'Über mich',
 				description:
-					'Cristina, Spanischlehrerin und Philologin in Salamanca. DELE-Prüferin und SIELE-Trainerin.',
+					'Cristina, Spanischlehrerin und Philologin. DELE-Prüferin und SIELE-Trainerin.',
 			},
 			lessons: {
 				title: 'Spanischunterricht',
