@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import Button from '@/shared/ui/Button.astro';
+import type { ResourceCardItem } from '@/features/resources/content';
+
+interface Props {
+	item: ResourceCardItem;
+	viewLabel: string;
+	downloadLabel: string;
+}
+
+const { item, viewLabel, downloadLabel } = Astro.props;
+---
+
+<article
+	class="flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated shadow-sm transition duration-200 hover:border-primary/40 hover:shadow-lg"
+>
+	<button
+		type="button"
+		class="group relative block aspect-[3/4] overflow-hidden bg-primary/10 text-left"
+		data-resource-open
+		data-resource-id={item.id}
+		data-resource-href={item.href}
+		data-resource-file={item.file}
+		data-resource-title={item.title}
+		aria-haspopup="dialog"
+		aria-controls="resource-viewer"
+		aria-label={item.title}
+	>
+		<Image
+			src={item.cover}
+			alt=""
+			class="h-full w-full object-cover object-top transition duration-300 ease-out group-hover:scale-[1.03]"
+			widths={[360, 540, 720]}
+			sizes="(min-width: 1024px) 340px, (min-width: 640px) 45vw, 90vw"
+		/>
+		<span
+			class="absolute left-3 top-3 rounded-full bg-surface/92 px-2.5 py-1 text-xs font-semibold tracking-wide text-ink shadow-sm"
+			aria-hidden="true"
+		>
+			{item.level}
+		</span>
+	</button>
+
+	<div class="flex flex-1 flex-col p-5 sm:p-6">
+		<h2 class="font-display text-xl font-semibold tracking-tight text-ink">
+			{item.title}
+		</h2>
+		<p class="mt-2 flex-1 text-sm leading-relaxed text-muted sm:text-base">
+			{item.description}
+		</p>
+		<div class="mt-5 grid grid-cols-2 gap-2">
+			<button
+				type="button"
+				class="inline-flex items-center justify-center rounded-lg bg-primary px-3 py-2.5 text-sm font-semibold tracking-wide text-primary-foreground shadow-sm transition duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-[0.98]"
+				data-resource-open
+				data-resource-id={item.id}
+				data-resource-href={item.href}
+				data-resource-file={item.file}
+				data-resource-title={item.title}
+				aria-haspopup="dialog"
+				aria-controls="resource-viewer"
+			>
+				{viewLabel}
+			</button>
+			<Button href={item.href} download={item.file} variant="ghost" class="w-full">
+				{downloadLabel}
+			</Button>
+		</div>
+	</div>
+</article>

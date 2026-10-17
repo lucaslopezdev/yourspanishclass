@@ -21,6 +21,7 @@ export type UiStrings = {
 	};
 	footer: {
 		rights: string;
+		madeBy: string;
 	};
 	placeholders: {
 		sectionReady: string;
@@ -63,6 +64,7 @@ export const ui: Record<Locale, UiStrings> = {
 		},
 		footer: {
 			rights: 'Todos los derechos reservados.',
+			madeBy: 'Hecho por Lucas Lopez',
 		},
 		placeholders: {
 			sectionReady: 'Contenido próximamente.',
@@ -81,19 +83,23 @@ export const ui: Record<Locale, UiStrings> = {
 			},
 			about: {
 				title: 'Sobre mí',
-				description: 'Conoce a tu profesora de español.',
+				description:
+					'Cristina, filóloga y profesora de español en Salamanca. Examinadora DELE y preparadora SIELE.',
 			},
 			lessons: {
 				title: 'Clases de español',
-				description: 'Clases adaptadas a tu nivel y objetivos.',
+				description:
+					'Clases individuales y en grupos de 3, con packs desde 27,50 €. Reunión previa de 30 min para diseñar tu plan.',
 			},
 			deleSiele: {
 				title: 'Preparación DELE y SIELE',
-				description: 'Prepárate para los exámenes oficiales.',
+				description:
+					'Preparación DELE y SIELE con examinadora oficial. Simulacros, materiales del Cervantes y un plan a tu nivel.',
 			},
 			resources: {
 				title: 'Recursos gratis',
-				description: 'Materiales gratuitos para practicar.',
+				description:
+					'Infografías y materiales gratuitos para practicar español: deseos, opiniones y expresiones coloquiales.',
 			},
 			contact: {
 				title: 'Contacto',
@@ -122,6 +128,7 @@ export const ui: Record<Locale, UiStrings> = {
 		},
 		footer: {
 			rights: 'All rights reserved.',
+			madeBy: 'Hecho por Lucas Lopez',
 		},
 		placeholders: {
 			sectionReady: 'Content coming soon.',
@@ -140,19 +147,23 @@ export const ui: Record<Locale, UiStrings> = {
 			},
 			about: {
 				title: 'About me',
-				description: 'Meet your Spanish teacher.',
+				description:
+					'Cristina, Spanish teacher and philologist in Salamanca. DELE examiner and SIELE trainer.',
 			},
 			lessons: {
 				title: 'Spanish lessons',
-				description: 'Lessons tailored to your level and goals.',
+				description:
+					'One-to-one and groups of 3, from 27,50 €. A 30-minute intake to design your plan.',
 			},
 			deleSiele: {
 				title: 'DELE and SIELE preparation',
-				description: 'Get ready for the official exams.',
+				description:
+					'DELE and SIELE prep with an official examiner. Mock exams, Cervantes materials and a plan at your level.',
 			},
 			resources: {
 				title: 'Free resources',
-				description: 'Free materials to practice.',
+				description:
+					'Free infographics and materials to practise Spanish: wishes, opinions and colloquial expressions.',
 			},
 			contact: {
 				title: 'Contact',
@@ -181,6 +192,7 @@ export const ui: Record<Locale, UiStrings> = {
 		},
 		footer: {
 			rights: 'Todos os direitos reservados.',
+			madeBy: 'Hecho por Lucas Lopez',
 		},
 		placeholders: {
 			sectionReady: 'Conteúdo em breve.',
@@ -199,19 +211,23 @@ export const ui: Record<Locale, UiStrings> = {
 			},
 			about: {
 				title: 'Sobre mim',
-				description: 'Conheça a sua professora de espanhol.',
+				description:
+					'Cristina, filóloga e professora de espanhol em Salamanca. Examinadora DELE e preparadora SIELE.',
 			},
 			lessons: {
 				title: 'Aulas de espanhol',
-				description: 'Aulas adaptadas ao seu nível e objetivos.',
+				description:
+					'Aulas individuais e em grupos de 3, com packs desde 27,50 €. Reunião prévia de 30 min para desenhar o teu plano.',
 			},
 			deleSiele: {
 				title: 'Preparação DELE e SIELE',
-				description: 'Prepare-se para os exames oficiais.',
+				description:
+					'Preparação DELE e SIELE com examinadora oficial. Simulacros, materiais do Cervantes e um plano ao teu nível.',
 			},
 			resources: {
 				title: 'Recursos grátis',
-				description: 'Materiais gratuitos para praticar.',
+				description:
+					'Infografias e materiais gratuitos para praticar espanhol: desejos, opiniões e expressões coloquiais.',
 			},
 			contact: {
 				title: 'Contacto',
@@ -240,6 +256,7 @@ export const ui: Record<Locale, UiStrings> = {
 		},
 		footer: {
 			rights: 'Tutti i diritti riservati.',
+			madeBy: 'Hecho por Lucas Lopez',
 		},
 		placeholders: {
 			sectionReady: 'Contenuti in arrivo.',
@@ -258,19 +275,23 @@ export const ui: Record<Locale, UiStrings> = {
 			},
 			about: {
 				title: 'Chi sono',
-				description: 'Conosci la tua insegnante di spagnolo.',
+				description:
+					'Cristina, filologa e insegnante di spagnolo a Salamanca. Esaminatrice DELE e preparatrice SIELE.',
 			},
 			lessons: {
 				title: 'Lezioni di spagnolo',
-				description: 'Lezioni su misura per il tuo livello e i tuoi obiettivi.',
+				description:
+					'Lezioni individuali e in gruppi di 3, con pacchetti da 27,50 €. Colloquio di 30 min per costruire il tuo piano.',
 			},
 			deleSiele: {
 				title: 'Preparazione DELE e SIELE',
-				description: 'Preparati agli esami ufficiali.',
+				description:
+					'Preparazione DELE e SIELE con esaminatrice ufficiale. Simulazioni, materiali Cervantes e un piano al tuo livello.',
 			},
 			resources: {
 				title: 'Risorse gratuite',
-				description: 'Materiali gratuiti per esercitarti.',
+				description:
+					'Infografiche e materiali gratuiti per esercitarti in spagnolo: desideri, opinioni ed espressioni colloquiali.',
 			},
 			contact: {
 				title: 'Contatto',
@@ -299,6 +320,7 @@ export const ui: Record<Locale, UiStrings> = {
 		},
 		footer: {
 			rights: 'Tous droits réservés.',
+			madeBy: 'Hecho por Lucas Lopez',
 		},
 		placeholders: {
 			sectionReady: 'Contenu à venir.',
@@ -317,19 +339,23 @@ export const ui: Record<Locale, UiStrings> = {
 			},
 			about: {
 				title: 'À propos',
-				description: 'Rencontrez votre professeure d’espagnol.',
+				description:
+					'Cristina, philologue et professeure d’espagnol à Salamanque. Examinatrice DELE et préparatrice SIELE.',
 			},
 			lessons: {
 				title: 'Cours d’espagnol',
-				description: 'Des cours adaptés à votre niveau et vos objectifs.',
+				description:
+					'Cours individuels et en groupes de 3, à partir de 27,50 €. Entretien de 30 min pour concevoir votre plan.',
 			},
 			deleSiele: {
 				title: 'Préparation DELE et SIELE',
-				description: 'Préparez-vous aux examens officiels.',
+				description:
+					'Préparation DELE et SIELE avec examinatrice officielle. Simulations, supports du Cervantes et un plan à votre niveau.',
 			},
 			resources: {
 				title: 'Ressources gratuites',
-				description: 'Des supports gratuits pour pratiquer.',
+				description:
+					'Infographies et supports gratuits pour pratiquer l’espagnol : souhaits, avis et expressions familières.',
 			},
 			contact: {
 				title: 'Contact',
@@ -358,6 +384,7 @@ export const ui: Record<Locale, UiStrings> = {
 		},
 		footer: {
 			rights: 'Alle Rechte vorbehalten.',
+			madeBy: 'Hecho por Lucas Lopez',
 		},
 		placeholders: {
 			sectionReady: 'Inhalt folgt in Kürze.',
@@ -376,19 +403,23 @@ export const ui: Record<Locale, UiStrings> = {
 			},
 			about: {
 				title: 'Über mich',
-				description: 'Lerne deine Spanischlehrerin kennen.',
+				description:
+					'Cristina, Spanischlehrerin und Philologin in Salamanca. DELE-Prüferin und SIELE-Trainerin.',
 			},
 			lessons: {
 				title: 'Spanischunterricht',
-				description: 'Unterricht passend zu deinem Niveau und deinen Zielen.',
+				description:
+					'Einzelunterricht und Gruppen zu 3, ab 27,50 €. Vorgespräch von 30 Min., um deinen Plan zu gestalten.',
 			},
 			deleSiele: {
 				title: 'DELE- und SIELE-Vorbereitung',
-				description: 'Bereite dich auf die offiziellen Prüfungen vor.',
+				description:
+					'DELE- und SIELE-Vorbereitung mit offizieller Prüferin. Simulationen, Cervantes-Materialien und ein Plan auf deinem Niveau.',
 			},
 			resources: {
 				title: 'Kostenlose Ressourcen',
-				description: 'Kostenlose Materialien zum Üben.',
+				description:
+					'Kostenlose Infografiken und Materialien zum Spanischüben: Wünsche, Meinungen und umgangssprachliche Ausdrücke.',
 			},
 			contact: {
 				title: 'Kontakt',

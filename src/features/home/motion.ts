@@ -69,10 +69,6 @@ export function initHomeMotion(): void {
 			animateCount(el);
 		}
 	});
-
-	observe('[data-reveal]', (el) => {
-		el.classList.add('is-visible');
-	});
 }
 
 initHomeMotion();

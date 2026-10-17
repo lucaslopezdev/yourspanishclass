@@ -6,6 +6,9 @@ interface Props {
 	type?: 'button' | 'submit' | 'reset';
 	variant?: Variant;
 	class?: string;
+	download?: boolean | string;
+	target?: string;
+	rel?: string;
 }
 
 const {
@@ -13,6 +16,9 @@ const {
 	type = 'button',
 	variant = 'primary',
 	class: className = '',
+	download,
+	target,
+	rel,
 } = Astro.props;
 
 const variants: Record<Variant, string> = {
@@ -37,7 +43,7 @@ const classes = [
 
 {
 	href ? (
-		<a href={href} class={classes}>
+		<a href={href} class={classes} download={download} target={target} rel={rel}>
 			<slot />
 		</a>
 	) : (

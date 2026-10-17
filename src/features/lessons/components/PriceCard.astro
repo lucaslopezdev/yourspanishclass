@@ -1,0 +1,45 @@
+---
+import Button from '@/shared/ui/Button.astro';
+import type { PricePlan } from '@/features/lessons/content';
+
+interface Props {
+	plan: PricePlan;
+	ctaLabel: string;
+	ctaHref: string;
+	featured?: boolean;
+}
+
+const { plan, ctaLabel, ctaHref, featured = false } = Astro.props;
+---
+
+<article
+	class:list={[
+		'flex h-full flex-col rounded-3xl border p-6 sm:p-7',
+		featured
+			? 'border-primary/40 bg-primary/5 shadow-sm'
+			: 'border-border bg-surface-elevated',
+	]}
+>
+	<h3 class="font-display text-xl font-semibold tracking-tight text-ink">
+		{plan.name}
+	</h3>
+	<p class="mt-2 text-sm text-muted">{plan.meta}</p>
+	<p class="mt-5 font-display text-4xl font-semibold tracking-tight text-ink">
+		{plan.price}
+	</p>
+	{
+		plan.perClass && (
+			<p class="mt-1 text-sm font-medium text-primary">{plan.perClass}</p>
+		)
+	}
+	{
+		plan.note && (
+			<p class="mt-3 text-xs tracking-wide text-muted">{plan.note}</p>
+		)
+	}
+	<div class="mt-auto pt-6">
+		<Button href={ctaHref} variant={featured ? 'primary' : 'ghost'} class="w-full">
+			{ctaLabel}
+		</Button>
+	</div>
+</article>

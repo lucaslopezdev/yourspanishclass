@@ -1,20 +1,216 @@
 ---
-import { getTranslations, type Locale } from '@/shared/i18n';
+import { examDateLinks, getDeleSieleCopy } from '@/features/dele-siele/content';
 import { localePath, navRoutes } from '@/shared/lib/paths';
-import SectionPlaceholder from '@/shared/ui/SectionPlaceholder.astro';
+import Button from '@/shared/ui/Button.astro';
+import type { Locale } from '@/shared/i18n';
 
 interface Props {
 	locale: Locale;
 }
 
 const { locale } = Astro.props;
-const t = getTranslations(locale);
+const copy = getDeleSieleCopy(locale);
+const contactHref = localePath(locale, navRoutes.contact);
 ---
 
-<SectionPlaceholder
-	title={t.pages.deleSiele.title}
-	description={t.pages.deleSiele.description}
-	placeholder={t.placeholders.sectionReady}
-	ctaLabel={t.cta.contact}
-	ctaHref={localePath(locale, navRoutes.contact)}
-/>
+<section class="mx-auto max-w-6xl px-4 pb-8 pt-10 sm:px-6 sm:pb-10 sm:pt-14">
+	<div data-reveal class="reveal max-w-2xl">
+		<p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+			{copy.hero.eyebrow}
+		</p>
+		<h1
+			class="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
+		>
+			{copy.hero.title}
+		</h1>
+		<p class="mt-4 text-lg leading-relaxed text-muted">{copy.hero.lead}</p>
+	</div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
+	<div data-reveal class="reveal max-w-2xl">
+		<h2 class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+			{copy.compare.title}
+		</h2>
+		<p class="mt-4 text-lg leading-relaxed text-muted">{copy.compare.lead}</p>
+	</div>
+	<div class="mt-10 grid gap-6 md:grid-cols-2">
+		<article
+			data-reveal
+			class="reveal rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8"
+		>
+			<p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">
+				{copy.compare.dele.title}
+			</p>
+			<p class="mt-4 text-base leading-relaxed text-muted">{copy.compare.dele.text}</p>
+			<ul class="mt-6 grid gap-3">
+				{
+					copy.compare.dele.points.map((point) => (
+						<li class="flex gap-3 text-sm leading-relaxed text-ink sm:text-base">
+							<span
+								class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+								aria-hidden="true"
+							/>
+							<span>{point}</span>
+						</li>
+					))
+				}
+			</ul>
+		</article>
+		<article
+			data-reveal
+			class="reveal rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8"
+		>
+			<p class="text-sm font-semibold uppercase tracking-[0.16em] text-tertiary">
+				{copy.compare.siele.title}
+			</p>
+			<p class="mt-4 text-base leading-relaxed text-muted">{copy.compare.siele.text}</p>
+			<ul class="mt-6 grid gap-3">
+				{
+					copy.compare.siele.points.map((point) => (
+						<li class="flex gap-3 text-sm leading-relaxed text-ink sm:text-base">
+							<span
+								class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-tertiary"
+								aria-hidden="true"
+							/>
+							<span>{point}</span>
+						</li>
+					))
+				}
+			</ul>
+		</article>
+	</div>
+</section>
+
+<section class="bg-surface-elevated">
+	<div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+		<div data-reveal class="reveal max-w-2xl">
+			<h2 class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+				{copy.why.title}
+			</h2>
+			<p class="mt-4 text-lg leading-relaxed text-muted">{copy.why.lead}</p>
+		</div>
+		<ul class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+			{
+				copy.why.items.map((item, index) => (
+					<li
+						data-reveal
+						class="reveal rounded-3xl border border-border bg-surface p-6"
+						style={`transition-delay: ${index * 50}ms`}
+					>
+						<h3 class="font-display text-xl font-semibold tracking-tight text-ink">
+							{item.title}
+						</h3>
+						<p class="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+							{item.text}
+						</p>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+	<div data-reveal class="reveal max-w-2xl">
+		<h2 class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+			{copy.prep.title}
+		</h2>
+		<p class="mt-4 text-lg leading-relaxed text-muted">{copy.prep.lead}</p>
+		<p class="mt-3 text-sm leading-relaxed text-muted sm:text-base">{copy.prep.price}</p>
+	</div>
+	<div class="mt-10 grid gap-6 md:grid-cols-2">
+		<article
+			data-reveal
+			class="reveal rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8"
+		>
+			<h3 class="font-display text-2xl font-semibold tracking-tight text-ink">
+				{copy.prep.dele.title}
+			</h3>
+			<ul class="mt-6 grid gap-3">
+				{
+					copy.prep.dele.points.map((point) => (
+						<li class="flex gap-3 text-sm leading-relaxed text-muted sm:text-base">
+							<span
+								class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+								aria-hidden="true"
+							/>
+							<span>{point}</span>
+						</li>
+					))
+				}
+			</ul>
+		</article>
+		<article
+			data-reveal
+			class="reveal rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8"
+		>
+			<h3 class="font-display text-2xl font-semibold tracking-tight text-ink">
+				{copy.prep.siele.title}
+			</h3>
+			<ul class="mt-6 grid gap-3">
+				{
+					copy.prep.siele.points.map((point) => (
+						<li class="flex gap-3 text-sm leading-relaxed text-muted sm:text-base">
+							<span
+								class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-tertiary"
+								aria-hidden="true"
+							/>
+							<span>{point}</span>
+						</li>
+					))
+				}
+			</ul>
+		</article>
+	</div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
+	<div
+		data-reveal
+		class="reveal rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8"
+	>
+		<h2 class="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+			{copy.dates.title}
+		</h2>
+		<p class="mt-3 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+			{copy.dates.lead}
+		</p>
+		<div class="mt-6 flex flex-wrap gap-3">
+			<Button
+				href={examDateLinks.dele}
+				variant="primary"
+				target="_blank"
+				rel="noreferrer"
+			>
+				{copy.dates.dele}
+			</Button>
+			<Button
+				href={examDateLinks.siele}
+				variant="ghost"
+				target="_blank"
+				rel="noreferrer"
+			>
+				{copy.dates.siele}
+			</Button>
+		</div>
+	</div>
+</section>
+
+<section class="bg-primary text-primary-foreground">
+	<div
+		class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-14 sm:px-6 sm:py-16 md:flex-row md:items-center md:justify-between"
+	>
+		<div class="max-w-xl">
+			<h2 class="font-display text-3xl font-semibold tracking-tight">
+				{copy.cta.title}
+			</h2>
+			<p class="mt-3 text-base text-primary-foreground/85 sm:text-lg">
+				{copy.cta.text}
+			</p>
+		</div>
+		<Button href={contactHref} variant="secondary">
+			{copy.cta.button}
+		</Button>
+	</div>
+</section>

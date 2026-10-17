@@ -1,20 +1,101 @@
 ---
-import { getTranslations, type Locale } from '@/shared/i18n';
+import { Image } from 'astro:assets';
+import aboutPhoto from '@/assets/cristina-about-me.jpg';
+import { getAboutCopy } from '@/features/about/content';
 import { localePath, navRoutes } from '@/shared/lib/paths';
-import SectionPlaceholder from '@/shared/ui/SectionPlaceholder.astro';
+import Button from '@/shared/ui/Button.astro';
+import type { Locale } from '@/shared/i18n';
 
 interface Props {
 	locale: Locale;
 }
 
 const { locale } = Astro.props;
-const t = getTranslations(locale);
+const copy = getAboutCopy(locale);
 ---
 
-<SectionPlaceholder
-	title={t.pages.about.title}
-	description={t.pages.about.description}
-	placeholder={t.placeholders.sectionReady}
-	ctaLabel={t.cta.contact}
-	ctaHref={localePath(locale, navRoutes.contact)}
-/>
+<section class="mx-auto max-w-6xl px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-14">
+	<div class="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+		<div>
+			<div
+				class="overflow-hidden rounded-3xl border border-border"
+				transition:name="cristina-portrait"
+			>
+				<Image
+					src={aboutPhoto}
+					alt={copy.hero.imageAlt}
+					class="aspect-[4/5] w-full object-cover object-[center_15%] sm:max-h-[34rem]"
+					widths={[480, 720, 960]}
+					sizes="(min-width: 1024px) 440px, 90vw"
+				/>
+			</div>
+		</div>
+		<div>
+			<p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+				{copy.hero.eyebrow}
+			</p>
+			<h1
+				class="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
+				transition:name="about-title"
+			>
+				{copy.hero.title}
+			</h1>
+			<p class="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+				{copy.hero.lead}
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+	<article data-reveal class="reveal">
+		<h2 class="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+			{copy.who.title}
+		</h2>
+		{
+			copy.who.paragraphs.map((paragraph) => (
+				<p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">{paragraph}</p>
+			))
+		}
+	</article>
+
+	<article data-reveal class="reveal mt-12">
+		<h2 class="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+			{copy.work.title}
+		</h2>
+		{
+			copy.work.paragraphs.map((paragraph) => (
+				<p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">{paragraph}</p>
+			))
+		}
+	</article>
+
+	<article data-reveal class="reveal mt-12">
+		<h2 class="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+			{copy.city.title}
+		</h2>
+		{
+			copy.city.paragraphs.map((paragraph) => (
+				<p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">{paragraph}</p>
+			))
+		}
+	</article>
+</section>
+
+<section class="bg-primary text-primary-foreground">
+	<div
+		class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-14 sm:px-6 sm:py-16 md:flex-row md:items-center md:justify-between"
+	>
+		<div class="max-w-xl">
+			<h2 class="font-display text-3xl font-semibold tracking-tight">
+				{copy.cta.title}
+			</h2>
+			<p class="mt-3 text-base text-primary-foreground/85 sm:text-lg">
+				{copy.cta.text}
+			</p>
+		</div>
+		<Button href={localePath(locale, navRoutes.contact)} variant="secondary">
+			{copy.cta.button}
+		</Button>
+	</div>
+</section>

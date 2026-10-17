@@ -29,8 +29,8 @@ export type HomeCopy = {
 	intro: {
 		eyebrow: string;
 		title: string;
-		paragraphs: string[];
-		highlight: string;
+		summary: string;
+		cta: string;
 		imageAlt: string;
 	};
 	services: {
@@ -83,12 +83,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 		intro: {
 			eyebrow: 'Tu profesora',
 			title: 'Soy Cristina, y el español es mi oficio',
-			paragraphs: [
-				'Vivo en Salamanca, donde estudié el Grado en Filología Hispánica y el Máster en Enseñanza del Español como Lengua Extranjera. Llevo 8 años trabajando con estudiantes de culturas, niveles y objetivos muy distintos.',
-				'Esa diversidad me enseñó a escuchar de verdad: qué necesitas, dónde te trabas y cómo avanzar sin perder el gusto por hablar.',
-			],
-			highlight:
-				'Soy examinadora DELE de todos los niveles y preparadora SIELE. Si tu meta es un diploma oficial, te guío con materiales oficiales y un plan a tu ritmo.',
+			summary:
+				'Filóloga en Salamanca y profesora desde hace 8 años. Acompaño a estudiantes de todo el mundo, de las primeras palabras al DELE o al SIELE.',
+			cta: 'Más sobre mí',
 			imageAlt: 'Cristina junto al río, con Salamanca al fondo',
 		},
 		services: {
@@ -173,12 +170,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 		intro: {
 			eyebrow: 'Your teacher',
 			title: 'I’m Cristina, and Spanish is my craft',
-			paragraphs: [
-				'I live in Salamanca, where I studied Hispanic Philology and a Master’s in Teaching Spanish as a Foreign Language. For 8 years I have worked with students of many cultures, levels and goals.',
-				'That mix taught me to listen: what you need, where you get stuck, and how to move forward without losing the joy of speaking.',
-			],
-			highlight:
-				'I am a DELE examiner at every level and a SIELE trainer. If you want an official diploma, I will guide you with official materials and a plan that respects your pace.',
+			summary:
+				'A philologist in Salamanca and a teacher for 8 years. I walk students from around the world from their first words to the DELE or SIELE.',
+			cta: 'More about me',
 			imageAlt: 'Cristina by the river, with Salamanca in the background',
 		},
 		services: {
@@ -263,12 +257,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 		intro: {
 			eyebrow: 'A tua professora',
 			title: 'Sou a Cristina, e o espanhol é o meu ofício',
-			paragraphs: [
-				'Vivo em Salamanca, onde estudei Filologia Hispânica e o Mestrado em Ensino de Espanhol como Língua Estrangeira. Há 8 anos trabalho com estudantes de culturas, níveis e objetivos muito diferentes.',
-				'Essa diversidade ensinou-me a escutar de verdade: o que precisas, onde travas e como avançar sem perder o gosto de falar.',
-			],
-			highlight:
-				'Sou examinadora DELE de todos os níveis e preparadora SIELE. Se o teu objetivo é um diploma oficial, guio-te com materiais oficiais e um plano ao teu ritmo.',
+			summary:
+				'Filóloga em Salamanca e professora há 8 anos. Acompanho estudantes de todo o mundo, das primeiras palavras ao DELE ou ao SIELE.',
+			cta: 'Mais sobre mim',
 			imageAlt: 'Cristina junto ao rio, com Salamanca ao fundo',
 		},
 		services: {
@@ -353,12 +344,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 		intro: {
 			eyebrow: 'La tua insegnante',
 			title: 'Sono Cristina, e lo spagnolo è il mio mestiere',
-			paragraphs: [
-				'Vivo a Salamanca, dove ho studiato Filologia Ispanica e il Master in Insegnamento dello Spagnolo come Lingua Straniera. Da 8 anni lavoro con studenti di culture, livelli e obiettivi molto diversi.',
-				'Questa varietà mi ha insegnato ad ascoltare davvero: di cosa hai bisogno, dove ti blocchi e come avanzare senza perdere il piacere di parlare.',
-			],
-			highlight:
-				'Sono esaminatrice DELE di tutti i livelli e preparatrice SIELE. Se il tuo obiettivo è un diploma ufficiale, ti guido con materiali ufficiali e un piano al tuo ritmo.',
+			summary:
+				'Filologa a Salamanca e insegnante da 8 anni. Accompagno studenti da tutto il mondo, dalle prime parole al DELE o al SIELE.',
+			cta: 'Di più su di me',
 			imageAlt: 'Cristina vicino al fiume, con Salamanca sullo sfondo',
 		},
 		services: {
@@ -443,12 +431,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 		intro: {
 			eyebrow: 'Votre professeure',
 			title: 'Je suis Cristina, et l’espagnol est mon métier',
-			paragraphs: [
-				'J’habite à Salamanque, où j’ai étudié la philologie hispanique et un master en enseignement de l’espagnol langue étrangère. Depuis 8 ans, j’accompagne des élèves de cultures, de niveaux et d’objectifs très différents.',
-				'Cette diversité m’a appris à vraiment écouter : ce dont vous avez besoin, où vous bloquez, et comment avancer sans perdre le plaisir de parler.',
-			],
-			highlight:
-				'Je suis examinatrice DELE à tous les niveaux et préparatrice SIELE. Si votre but est un diplôme officiel, je vous guide avec des supports officiels et un plan à votre rythme.',
+			summary:
+				'Philologue à Salamanque et professeure depuis 8 ans. J’accompagne des élèves du monde entier, des premiers mots au DELE ou au SIELE.',
+			cta: 'En savoir plus sur moi',
 			imageAlt: 'Cristina au bord de la rivière, Salamanque en arrière-plan',
 		},
 		services: {
@@ -533,12 +518,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 		intro: {
 			eyebrow: 'Deine Lehrerin',
 			title: 'Ich bin Cristina, und Spanisch ist mein Beruf',
-			paragraphs: [
-				'Ich lebe in Salamanca, wo ich Hispanische Philologie und den Master in der Lehre des Spanischen als Fremdsprache studiert habe. Seit 8 Jahren arbeite ich mit Lernenden aus sehr unterschiedlichen Kulturen, Niveaus und Zielen.',
-				'Diese Vielfalt hat mich gelehrt, wirklich zuzuhören: was du brauchst, wo du hängen bleibst und wie du vorankommst, ohne die Freude am Sprechen zu verlieren.',
-			],
-			highlight:
-				'Ich bin DELE-Prüferin aller Niveaus und SIELE-Trainerin. Wenn dein Ziel ein offizielles Diplom ist, führe ich dich mit offiziellen Materialien und einem Plan in deinem Tempo.',
+			summary:
+				'Philologin in Salamanca und seit 8 Jahren Lehrerin. Ich begleite Lernende aus aller Welt, von den ersten Wörtern bis zum DELE oder SIELE.',
+			cta: 'Mehr über mich',
 			imageAlt: 'Cristina am Fluss, mit Salamanca im Hintergrund',
 		},
 		services: {
